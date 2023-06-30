@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Quick Chat</string>
+    <string name="title_activity_main_page">MainPageActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noAccountError">Account does\'nt exists</string>
+    <string name="invalidEmailError">Invalid email address</string>
+    <string name="enterEmailPromp">Please enter email address</string>
+    <string name="enterEmailPrompt">Please enter email</string>
+    <string name="enterPasswordPrompt">Please enter password</string>
+    <string name="errorInRegisteration">Error in registering,Please try again later</string>
+    <string name="weakPassword">Weak Password</string>
+    <string name="alreadyRegisteredError">This email is already registered</string>
+    <string name="invalidEmailAddress">Invalid email address</string>
+    <string name="enterPasswordPromp">Please enter password</string>
+    <string name="invalidPasswordError">Invalid password</string>
+</resources>
