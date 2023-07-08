@@ -1,9 +1,5 @@
 package com.example.chat_app.Notifications;
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -19,10 +15,7 @@ public class MyFirebaseIdService extends FirebaseMessagingService {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         // TODO: 6/29/2023
         String refreshToken = String.valueOf(FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
-                    }
+                .addOnCompleteListener(task -> {
                 }));
         if (firebaseUser != null) {
             updateToken(refreshToken);

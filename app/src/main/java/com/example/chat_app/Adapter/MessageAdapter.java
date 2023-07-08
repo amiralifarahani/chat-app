@@ -21,9 +21,9 @@ import java.util.List;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
     public static final int MSG_TYPE_LEFT = 0;
     public static final int MSG_TYPE_RIGHT = 1;
-    private Context mContext;
-    private List<Chat> mChat;
-    private String imageurl;
+    private final Context mContext;
+    private final List<Chat> mChat;
+    private final String imageurl;
     FirebaseUser fuser;
 
     public MessageAdapter(Context mContext, List<Chat> mChat, String imageurl) {

@@ -42,7 +42,7 @@ public class ONotification extends ContextWrapper {
     }
 
     @TargetApi(Build.VERSION_CODES.O)
-    public Notification.Builder getOreoNotication(String title, String body, PendingIntent pendingIntent, Uri sounduri, String icon) {
+    public Notification.Builder getOreoNotification(String title, String body, PendingIntent pendingIntent, Uri sounduri, String icon) {
         return new Notification.Builder(getApplicationContext(), CHANNEL_ID).setContentIntent(pendingIntent).setContentTitle(title).setContentText(body).setSmallIcon(Integer.parseInt(icon)).setSound(sounduri).setAutoCancel(true);
     }
 }

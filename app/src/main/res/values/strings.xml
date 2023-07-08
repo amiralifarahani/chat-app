@@ -17,4 +17,5 @@
     <string name="invalidEmailAddress">Invalid email address</string>
     <string name="enterPasswordPromp">Please enter password</string>
     <string name="invalidPasswordError">Invalid password</string>
+    <string name="NoAccountError">Account doesn\'t exist</string>
 </resources>

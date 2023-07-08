@@ -109,7 +109,7 @@ public class SignUpPageActivity extends AppCompatActivity {
 
                                     } else {
                                         progressDialog.dismiss();
-                                        Toast.makeText(SignUpPageActivity.this, "Could'nt register make you are connected to internet", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(SignUpPageActivity.this, "Could'nt register make sure you are connected to internet", Toast.LENGTH_LONG).show();
                                     }
                                 });
                             } else {
@@ -123,7 +123,7 @@ public class SignUpPageActivity extends AppCompatActivity {
                                     errortv.setText(R.string.alreadyRegisteredError);
                                 } catch (Exception e) {
                                     progressDialog.dismiss();
-                                    Toast.makeText(SignUpPageActivity.this, "Could'nt register make you are connected to internet", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(SignUpPageActivity.this, "Could'nt register make sure you are connected to internet", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });

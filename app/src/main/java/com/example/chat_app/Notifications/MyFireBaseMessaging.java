@@ -58,7 +58,7 @@ public class MyFireBaseMessaging extends FirebaseMessagingService {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT);
         Uri defaultSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         ONotification oNotification = new ONotification(this);
-        Notification.Builder builder = oNotification.getOreoNotication(title, body, pendingIntent, defaultSound, icon);
+        Notification.Builder builder = oNotification.getOreoNotification(title, body, pendingIntent, defaultSound, icon);
         int i = 0;
         if (j > 0) {
             i = j;

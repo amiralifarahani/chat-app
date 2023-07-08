@@ -10,8 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.example.chat_app.Adapter.UserAdapter;
+import com.example.chat_app.Model.Chat;
+import com.example.chat_app.Model.User;
+import com.example.chat_app.Notifications.Token;
+import com.example.chat_app.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -19,11 +22,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.chat_app.Adapter.UserAdapter;
-import com.example.chat_app.Model.Chat;
-import com.example.chat_app.Model.User;
-import com.example.chat_app.Notifications.Token;
-import com.example.chat_app.R;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
@@ -73,11 +71,8 @@ public class ChatsFragment extends Fragment {
         });
         // TODO: 6/29/2023
         updateToken(String.valueOf(FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(new OnCompleteListener<String>() {
-                    @Override
-                    public void onComplete(@NonNull Task<String> task) {
+                .addOnCompleteListener(task -> {
 
-                    }
                 })));
         return view;
     }

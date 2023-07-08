@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseApp.initializeApp(this);
         firebaseAuth = FirebaseAuth.getInstance();
-        if (firebaseAuth.getCurrentUser() != null) {
-            Intent i = new Intent(getApplicationContext(), MainPageActivity.class);
-            startActivity(i);
-        }
+//        if (firebaseAuth.getCurrentUser() != null) {
+//            Intent i = new Intent(getApplicationContext(), MainPageActivity.class);
+//            startActivity(i);
+//        }
     }
 
     @Override
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 throw task.getException();
                             } catch (FirebaseAuthInvalidUserException invalidEmail) {
-                                errorTextview.setText("Account doesn't exist");
+                                errorTextview.setText(R.string.NoAccountError);
                             } catch (FirebaseAuthInvalidCredentialsException wrongPassword) {
                                 errorTextview.setText(R.string.invalidPasswordError);
                             } catch (Exception e) {

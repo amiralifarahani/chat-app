@@ -24,7 +24,7 @@
         android:layout_width="233dp"
         android:layout_height="45dp"
         android:fontFamily="@font/aclonica"
-        android:text="Quick Chat"
+        android:text="  chat-app"
         android:textColor="#2196F3"
         android:textSize="36sp"
         android:textStyle="bold|italic"
@@ -34,20 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.195" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/almendra"
-        android:text=" © Vaibhav Mojidra"
-        android:textColor="#070707"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.615" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,17 +11,18 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        Thread n=new Thread(){
-          @Override
-          public void run(){
-              try {
-                  Thread.sleep(3000);
-                  Intent i=new Intent(SplashScreen.this,MainActivity.class);
-                  startActivity(i);
-                  overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_in);
-                  finish();
-              }catch(Exception e){}
-          }
+        Thread n = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(i);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_in);
+                    finish();
+                } catch (Exception ignored) {
+                }
+            }
         };
         n.start();
     }

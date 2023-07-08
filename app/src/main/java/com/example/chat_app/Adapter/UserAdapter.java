@@ -20,8 +20,8 @@ import com.example.chat_app.R;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
-    private Context mContext;
-    private List<User> mUsers;
+    private final Context mContext;
+    private final List<User> mUsers;
     boolean ischat;
 
     public UserAdapter(Context mContext, List<User> mUsers, boolean ischat) {
@@ -58,15 +58,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             holder.img_on.setVisibility(View.GONE);
             holder.img_off.setVisibility(View.GONE);
         }
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, MessageActivity.class);
-                intent.putExtra("userid", user.getId());
-                Activity activity = (Activity) mContext;
-                activity.startActivity(intent);
-                activity.overridePendingTransition(R.anim.nav_to_chat, android.R.anim.slide_out_right);
-            }
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, MessageActivity.class);
+            intent.putExtra("userid", user.getId());
+            Activity activity = (Activity) mContext;
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.nav_to_chat, android.R.anim.slide_out_right);
         });
 
     }
@@ -80,8 +77,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
         public TextView username;
         public ImageView profile_image;
-        private ImageView img_on;
-        private ImageView img_off;
+        private final ImageView img_on;
+        private final ImageView img_off;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
